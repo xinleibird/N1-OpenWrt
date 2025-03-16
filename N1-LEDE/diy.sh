@@ -18,6 +18,7 @@ git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-a
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
+git clone https://github.com/aa65535/openwrt-shadowvpn.git package/shadowvpn
 
 git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
@@ -41,3 +42,4 @@ sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generat
 
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
+
