@@ -25,7 +25,7 @@ git clone -b v3.35.0 --single-branch --depth 1 https://github.com/sbwml/luci-app
 #添加自定义的软件包源
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-theme-design
 #git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-design-config
-
+git clone https://github.com/aa65535/openwrt-shadowvpn.git package/shadowvpn #sv
 
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
@@ -40,3 +40,4 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 
 # Default IP
 sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generate
+
